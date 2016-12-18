@@ -13,7 +13,7 @@ public class Animal {
     public Animal(String name, String animalType, int foodChainLevel){
         this.name = name;
         this.animalType = animalType;
-        this.hunger = 50;
+        this.hunger = 100;
         this.foodChainLevel = foodChainLevel;
     }
 

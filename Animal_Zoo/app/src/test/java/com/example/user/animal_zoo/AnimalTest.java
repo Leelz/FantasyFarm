@@ -22,7 +22,12 @@ public class AnimalTest {
 
     @Test
     public void testGetAnimalType()   {
-        assertEquals("Tiger", animal.getAnimalType());
+        assertEquals(100, animal.getHunger());
+    }
+
+    @Test
+    public void testGetFoodChainLevel()   {
+        assertEquals(10, animal.getFoodChainLevel());
     }
 
 }

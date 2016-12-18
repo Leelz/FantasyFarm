@@ -10,7 +10,7 @@ public class Zoo {
     private ArrayList<Enclosure> allEnclosures;
 
     public Zoo(ArrayList<Enclosure> allEnclosures) {
-        this.allEnclosures = new ArrayList<Enclosure>(allEnclosures)
+        this.allEnclosures = new ArrayList<Enclosure>(allEnclosures);
     }
 
     public ArrayList<Enclosure> getAllEnclosures() {

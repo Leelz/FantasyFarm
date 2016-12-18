@@ -19,5 +19,5 @@ public class EnclosureTest {
         assertEquals("AQUARIUM", enclosure.getType());
     }
 
-    
+
 }

@@ -6,13 +6,13 @@ package com.example.user.animal_zoo;
 public class Animal {
 
     String name;
-    String animal;
+    String animalType;
     int hunger;
     int foodChainLevel;
 
-    public Animal(String name, String animal, int FoodChainLevel){
+    public Animal(String name, String animalType, int foodChainLevel){
         this.name = name;
-        this.animal = animal;
+        this.animalType = animalType;
         this.hunger = 50;
         this.foodChainLevel = foodChainLevel;
     }
@@ -24,6 +24,8 @@ public class Animal {
     public String getName() {
         return name;
     }
+
+    public String getAnimalType()   { return animalType; }
 
     public int getFoodChainLevel() {
         return foodChainLevel;

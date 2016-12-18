@@ -52,6 +52,9 @@ public class Enclosure {
         return null;
     }
 
+    public Animal getAnimalByIndex(int index)   {
+        return animalList.get(index);
+    }
 
 }
 

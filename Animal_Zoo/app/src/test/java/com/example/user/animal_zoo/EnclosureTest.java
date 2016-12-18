@@ -8,15 +8,29 @@ import static org.junit.Assert.*;
 public class EnclosureTest {
 
     private Enclosure enclosure;
+    private Animal animal1;
+    private Animal animal2;
 
     @Before
     public void Before()    {
         enclosure = new Enclosure("AQUARIUM");
+        animal1 = new Animal("Frank", "Buffalo", 6);
+        animal2 = new Animal("Sammy", "Giraffe", 5);
     }
 
     @Test
     public void testGetEnclosureType(){
         assertEquals("AQUARIUM", enclosure.getType());
+    }
+
+    @Test
+    public void testCanAddAnimalToEnclosure(){
+        assertEquals(2, enclosure.numberOfAnimalsInEnclosure());
+    }
+
+    @Test
+    public void testRemoveAnimalFromEnclosure(){
+        assertEquals(1, enclosure.numberOfAnimalsInEnclosure());
     }
 
 

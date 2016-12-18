@@ -7,6 +7,9 @@ package com.example.user.animal_zoo;
 import java.util.ArrayList;
 
 public class Enclosure {
+    private String type;
+    private ArrayList<Animal> animals;
+
 
 }
 

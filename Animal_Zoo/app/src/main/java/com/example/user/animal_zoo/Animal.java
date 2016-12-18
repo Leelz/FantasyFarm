@@ -9,6 +9,12 @@ public class Animal {
     int hunger;
     int foodChainLevel;
 
+    public Animal(String name, int FoodChainLevel){
+        this.name = name;
+        this.hunger = 50;
+        this.foodChainLevel = foodChainLevel;
+    }
+
     public int getHunger() {
         return hunger;
     }

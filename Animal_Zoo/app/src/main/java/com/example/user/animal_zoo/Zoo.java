@@ -8,9 +8,11 @@ import java.util.ArrayList;
 public class Zoo {
 
     private ArrayList<Enclosure> allEnclosures;
+    private String name;
 
-    public Zoo(ArrayList<Enclosure> allEnclosures) {
+    public Zoo(String name) {
         this.allEnclosures = new ArrayList<Enclosure>(allEnclosures);
+        this.name = name;
     }
 
     public ArrayList<Enclosure> getAllEnclosures() {
@@ -21,5 +23,15 @@ public class Zoo {
         allEnclosures.add(enclosure);
     }
 
+    public String getName() {
+        return name;
+    }
 
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public Enclosure selectEnclosureByIndex(int index){
+        return allEnclosures.get(index);
+    }
 }

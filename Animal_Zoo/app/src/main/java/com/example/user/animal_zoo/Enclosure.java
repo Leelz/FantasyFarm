@@ -27,8 +27,8 @@ public class Enclosure {
 
     }
 
-    public void numberOfAnimalsInEnclosure()    {
-        animals.size();
+    public int numberOfAnimalsInEnclosure()    {
+        return animals.size();
     }
 
     public Animal findAnimalByName(String searchName) throws NullStringException{

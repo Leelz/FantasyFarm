@@ -23,9 +23,6 @@ public class Enclosure {
         animalList.add(animal);
     }
 
-    public void removeAnimalFromEnclosure(Animal animal)    {
-    }
-
     public ArrayList<Animal> getAnimalsList() {
         return animalList;
     }
@@ -38,10 +35,8 @@ public class Enclosure {
         return animalList.size();
     }
 
-    public Animal findAnimalByName(String searchName) throws NullStringException{
-        if (searchName == null){
-            throw new NullStringException("Cannot search for a pet with null instead of a name String");
-        }
+
+    public Animal findAnimalByName(String searchName)   {
         String searchLower = searchName.toLowerCase();
         for (Animal animal : animalList){
             String animalName = animal.getName().toLowerCase();
@@ -52,9 +47,23 @@ public class Enclosure {
         return null;
     }
 
+    public int getAnimalPosition(Animal animal) {
+        return animalList.indexOf(animal);
+    }
+
+    public void removeAnimalByName(String searchName)    {
+        Animal animal = findAnimalByName(searchName);
+        int index = getAnimalPosition(animal);
+        animalList.remove(index);
+    }
+
     public Animal getAnimalByIndex(int index)   {
         return animalList.get(index);
     }
-
 }
+
+//throws NullStringException{
+//        if (searchName == null){
+//        throw new NullStringException("Cannot search for a pet with null instead of a name String");
+//        }
 

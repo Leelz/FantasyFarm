@@ -14,8 +14,8 @@ public class EnclosureTest {
     @Before
     public void Before()    {
         enclosure = new Enclosure("AQUARIUM");
-        animal1 = new Animal("Frank", "Buffalo", 6);
-        animal2 = new Animal("Sammy", "Giraffe", 5);
+        animal1 = new Animal("Frank", "Piranha", 6);
+        animal2 = new Animal("Sammy", "Trout", 5);
     }
 
     @Test
@@ -25,11 +25,16 @@ public class EnclosureTest {
 
     @Test
     public void testCanAddAnimalToEnclosure(){
+        enclosure.addAnimalToEnclosure(animal1);
+        enclosure.addAnimalToEnclosure(animal2);
         assertEquals(2, enclosure.numberOfAnimalsInEnclosure());
     }
 
     @Test
     public void testRemoveAnimalFromEnclosure(){
+        enclosure.addAnimalToEnclosure(animal1);
+        enclosure.addAnimalToEnclosure(animal2);
+        enclosure.removeAnimalByName("Sammy");
         assertEquals(1, enclosure.numberOfAnimalsInEnclosure());
     }
 

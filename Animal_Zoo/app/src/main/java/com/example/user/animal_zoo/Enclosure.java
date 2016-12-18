@@ -8,11 +8,11 @@ import java.util.ArrayList;
 
 public class Enclosure {
     private String type;
-    private ArrayList<Animal> animals;
+    private ArrayList<Animal> animalList;
 
     public Enclosure(String type){
         this.type = type;
-        animals = new ArrayList<>();
+        animalList = new ArrayList<>();
     }
 
     public String getType() {
@@ -20,15 +20,22 @@ public class Enclosure {
     }
 
     public void addAnimalToEnclosure(Animal animal) {
-        animals.add(animal);
+        animalList.add(animal);
     }
 
     public void removeAnimalFromEnclosure(Animal animal)    {
+    }
 
+    public ArrayList<Animal> getAnimalsList() {
+        return animalList;
+    }
+
+    public String getEnclosureType() {
+        return this.type;
     }
 
     public int numberOfAnimalsInEnclosure()    {
-        return animals.size();
+        return animalList.size();
     }
 
     public Animal findAnimalByName(String searchName) throws NullStringException{
@@ -36,7 +43,7 @@ public class Enclosure {
             throw new NullStringException("Cannot search for a pet with null instead of a name String");
         }
         String searchLower = searchName.toLowerCase();
-        for (Animal animal : animals){
+        for (Animal animal : animalList){
             String animalName = animal.getName().toLowerCase();
             if (animalName.equals(searchLower)){
                 return animal;

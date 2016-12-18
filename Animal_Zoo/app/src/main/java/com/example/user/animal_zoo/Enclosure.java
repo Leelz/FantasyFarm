@@ -18,6 +18,6 @@ public class Enclosure {
     public String getType() {
         return type;
     }
-    
+
 }
 

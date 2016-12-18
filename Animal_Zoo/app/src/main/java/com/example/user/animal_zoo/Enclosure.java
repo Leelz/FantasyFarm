@@ -19,5 +19,32 @@ public class Enclosure {
         return type;
     }
 
+    public void addAnimalToEnclosure(Animal animal) {
+        animals.add(animal);
+    }
+
+    public void removeAnimalFromEnclosure(Animal animal)    {
+
+    }
+
+    public void numberOfAnimalsInEnclosure()    {
+        animals.size();
+    }
+
+    public Animal findAnimalByName(String searchName) throws NullStringException{
+        if (searchName == null){
+            throw new NullStringException("Cannot search for a pet with null instead of a name String");
+        }
+        String searchLower = searchName.toLowerCase();
+        for (Animal animal : animals){
+            String animalName = animal.getName().toLowerCase();
+            if (animalName.equals(searchLower)){
+                return animal;
+            }
+        }
+        return null;
+    }
+
+
 }
 

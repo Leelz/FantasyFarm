@@ -30,4 +30,5 @@ public class AnimalTest {
         assertEquals(10, animal.getFoodChainLevel());
     }
 
+
 }

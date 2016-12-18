@@ -57,8 +57,8 @@ public class Enclosure {
         animalList.remove(index);
     }
 
-    public Animal getAnimalByIndex(int index)   {
-        return animalList.get(index);
+    public void removeAnimalByIndex(int index)   {
+        animalList.remove(index);
     }
 }
 

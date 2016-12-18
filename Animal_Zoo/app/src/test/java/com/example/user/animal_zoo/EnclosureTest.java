@@ -24,6 +24,11 @@ public class EnclosureTest {
     }
 
     @Test
+    public void testEnclosureStartsEmpty(){
+        assertEquals(0, enclosure.numberOfAnimalsInEnclosure());
+    }
+
+    @Test
     public void testCanAddAnimalToEnclosure(){
         enclosure.addAnimalToEnclosure(animal1);
         enclosure.addAnimalToEnclosure(animal2);
@@ -35,6 +40,14 @@ public class EnclosureTest {
         enclosure.addAnimalToEnclosure(animal1);
         enclosure.addAnimalToEnclosure(animal2);
         enclosure.removeAnimalByName("Sammy");
+        assertEquals(1, enclosure.numberOfAnimalsInEnclosure());
+    }
+
+    @Test
+    public void testGetAnimalByIndex()   {
+        enclosure.addAnimalToEnclosure(animal1);
+        enclosure.addAnimalToEnclosure(animal2);
+        enclosure.removeAnimalByIndex(1);
         assertEquals(1, enclosure.numberOfAnimalsInEnclosure());
     }
 

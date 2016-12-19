@@ -7,16 +7,16 @@ package com.example.user.animal_zoo;
 import java.util.ArrayList;
 
 public class Enclosure {
-    private String type;
+    private EnclosureType type;
     private ArrayList<Animal> animalList;
 
-    public Enclosure(String type){
+    public Enclosure(EnclosureType type){
         this.type = type;
         animalList = new ArrayList<>();
     }
 
-    public String getType() {
-        return type;
+    public EnclosureType getEnclosureType() {
+        return this.type;
     }
 
     public void addAnimalToEnclosure(Animal animal) {
@@ -25,10 +25,6 @@ public class Enclosure {
 
     public ArrayList<Animal> getAnimalsList() {
         return animalList;
-    }
-
-    public String getEnclosureType() {
-        return this.type;
     }
 
     public int numberOfAnimalsInEnclosure()    {

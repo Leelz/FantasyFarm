@@ -13,14 +13,14 @@ public class EnclosureTest {
 
     @Before
     public void Before()    {
-        enclosure = new Enclosure("AQUARIUM");
+        enclosure = new Enclosure(EnclosureType.AQUARIUM);
         animal1 = new Animal("Frank", "Piranha", 6);
         animal2 = new Animal("Sammy", "Trout", 5);
     }
 
     @Test
     public void testGetEnclosureType(){
-        assertEquals("AQUARIUM", enclosure.getType());
+        assertEquals(EnclosureType.AQUARIUM, enclosure.getEnclosureType());
     }
 
     @Test

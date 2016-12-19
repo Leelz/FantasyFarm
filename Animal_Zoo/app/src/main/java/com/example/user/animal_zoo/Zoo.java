@@ -10,28 +10,27 @@ public class Zoo {
     private ArrayList<Enclosure> allEnclosures;
     private String name;
 
+
     public Zoo(String name) {
-        this.allEnclosures = new ArrayList<Enclosure>(allEnclosures);
+        allEnclosures = new ArrayList<>();
         this.name = name;
     }
 
-    public ArrayList<Enclosure> getAllEnclosures() {
-        return allEnclosures;
-    }
-
-    public void addEnclosureToZoo(Enclosure enclosure) {
-        allEnclosures.add(enclosure);
-    }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name){
-        this.name = name;
+    public void addNewEnclosure(Enclosure enclosure)   {
+        allEnclosures.add(enclosure);
     }
 
     public Enclosure selectEnclosureByIndex(int index){
         return allEnclosures.get(index);
     }
+
+    public int numberOfEnclosuresInZoo()    {
+        return allEnclosures.size();
+    }
+
 }

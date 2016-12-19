@@ -38,6 +38,8 @@ public class Animal {
     public void whenToFeedAnimal()  {
         if (this.hunger > 60)   {
             feedAnimal();
+        } else {
+            return;
         }
     }
 

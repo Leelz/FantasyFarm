@@ -5,13 +5,13 @@ import java.util.ArrayList;
  * Created by user on 18/12/2016.
  */
 
-public class Zoo {
+public class Farm {
 
     private ArrayList<Enclosure> allEnclosures;
     private String name;
 
 
-    public Zoo(String name) {
+    public Farm(String name) {
         allEnclosures = new ArrayList<>();
         this.name = name;
     }
@@ -29,7 +29,7 @@ public class Zoo {
         return allEnclosures.get(index);
     }
 
-    public int numberOfEnclosuresInZoo()    {
+    public int numberOfEnclosuresInFarm()    {
         return allEnclosures.size();
     }
 

@@ -5,9 +5,10 @@ package com.example.user.animal_zoo;
  */
 public enum EnclosureType {
 
-    AQUARIUM,
-    MARINA,
+    PIGSTY,
     PADDOCK,
-    CAGE,
-    APIARY,
+    FIELD,
+    COOP,
+    SHEEPFOLD,
+
 }

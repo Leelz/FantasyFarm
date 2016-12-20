@@ -8,6 +8,5 @@ public enum EnclosureType {
     PIGSTY,
     FIELD,
     COOP,
-    SHEEPFOLD,
 
 }

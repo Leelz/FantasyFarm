@@ -17,4 +17,6 @@ public class Cow extends Animal {
         useEnergy();
         return "Moooooo";
     }
+
+
 }

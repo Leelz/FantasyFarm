@@ -8,14 +8,7 @@ import java.util.ArrayList;
 
 public class Farmer {
 
-    public Farmer() {
-    }
 
-    public void feedAnimal(Animal animal){
-        if(animal.bellyFull()) return;
-        int energy = animal.getEnergy();
-        energy += 10;
-    }
 
 
 }

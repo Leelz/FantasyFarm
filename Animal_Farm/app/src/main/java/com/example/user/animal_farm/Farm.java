@@ -16,7 +16,6 @@ public class Farm {
         this.name = name;
     }
 
-
     public String getName() {
         return name;
     }
@@ -29,8 +28,33 @@ public class Farm {
         return allEnclosures.get(index);
     }
 
+    public void removeEnclosureByIndex(int index)   {
+        allEnclosures.remove(index);
+    }
+
     public int numberOfEnclosuresInFarm()    {
         return allEnclosures.size();
     }
 
+    /////
+
+    public Animal getAnimal(Animal animal, Enclosure enclosure) {
+        return enclosure.findAnimalByName(animal.getName());
+    }
+
+    public Animal canSellAnimal(Animal animal) {
+        if (animal.age <= 1) {
+            return animal;
+        }
+        return null;
+    }
+
+    public void sellAnimal(Farm farm, Farm farm2)   {
+        farm.getAnimal(Animal animal, Enclosure enclosure)
+        int index = enclosure.getANimal(animal);
+    }
+
+
+
 }
+

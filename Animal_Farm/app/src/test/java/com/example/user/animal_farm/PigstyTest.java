@@ -19,8 +19,8 @@ public class PigstyTest {
     @Before
     public void Before()    {
         enclosure = new Pigsty(EnclosureType.PIGSTY);
-        pig1 = new Pig("Daisy", "Pig");
-        pig2 = new Pig("Jane", "Pig");
+        pig1 = new Pig("Daisy", "Pig", 5);
+        pig2 = new Pig("Jane", "Pig", 4);
     }
 
     @Test

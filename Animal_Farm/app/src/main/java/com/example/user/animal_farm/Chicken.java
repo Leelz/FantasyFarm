@@ -5,17 +5,17 @@ package com.example.user.animal_farm;
  */
 public class Chicken extends Animal implements Trampleable, Edible {
 
-    public Chicken(String name, String animalType){
-        super(name, animalType);
+    public Chicken(String name, String animalType, int age){
+        super(name, animalType, age);
     }
 
     public String getAnimalType()   {
         return animalType;
     }
 
-    public String fly() {
-        spendEnergy();
-        return "I do not like to fly in this enclosure, I want to be free!";
+    public String Squawk() {
+        useEnergy();
+        return "Squawwwwk";
     }
 }
 

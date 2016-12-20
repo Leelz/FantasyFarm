@@ -18,8 +18,8 @@ public class FieldTest {
     @Before
     public void Before()    {
         enclosure = new Field(EnclosureType.FIELD);
-        dairyCow1 = new Cow("Daisy", "Cow");
-        dairyCow2 = new Cow("Jane", "Cow");
+        dairyCow1 = new Cow("Daisy", "Cow", 3);
+        dairyCow2 = new Cow("Jane", "Cow", 5);
     }
 
     @Test

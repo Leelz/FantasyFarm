@@ -19,8 +19,8 @@ public class CoopTest {
     @Before
     public void Before()    {
         enclosure = new Coop(EnclosureType.COOP);
-        chicken1 = new Chicken("Daisy", "Chicken");
-        chicken2 = new Chicken("Jane", "Chicken");
+        chicken1 = new Chicken("Daisy", "Chicken", 2);
+        chicken2 = new Chicken("Jane", "Chicken", 2);
     }
 
     @Test

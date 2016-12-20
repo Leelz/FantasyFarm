@@ -5,13 +5,16 @@ package com.example.user.animal_farm;
  */
 public class Cow extends Animal {
 
-    String animalType;
-
-    public Cow(String name, String animalType){
-        super(name, animalType);
+    public Cow(String name, String animalType, int age){
+        super(name, animalType, age);
     }
 
     public String getAnimalType()   {
         return animalType;
+    }
+
+    public String Moo() {
+        useEnergy();
+        return "Moooooo";
     }
 }

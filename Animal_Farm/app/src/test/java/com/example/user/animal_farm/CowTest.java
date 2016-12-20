@@ -16,9 +16,9 @@ public class CowTest {
 
     @Before
     public void Before(){
-        daisy = new Cow("Daisy", "Cow");
-        jane = new Cow("Jane", "Cow");
-        patty = new Cow("Patty", "Cow");
+        daisy = new Cow("Daisy", "Cow", 12);
+        jane = new Cow("Jane", "Cow", 10);
+        patty = new Cow("Patty", "Cow", 1);
     }
 
     @Test
@@ -36,5 +36,29 @@ public class CowTest {
         assertEquals("Cow", daisy.getAnimalType());
     }
 
+    @Test
+    public void testAnimalCanEat() {
+        patty.useEnergy();
+        patty.eat();
+        assertEquals(100, patty.getEnergy());
+    }
 
+    @Test
+    public void testAnimalCannotEatWhenFull() {
+        patty.eat();
+        assertEquals(100, patty.getEnergy());
+    }
+
+    @Test
+    public void testUseEnergy() {
+        patty.useEnergy();
+        assertEquals(90, patty.getEnergy());
+    }
+
+    @Test
+    public void testCannotUseEnergy() {
+        patty.setEnergy(5);
+        patty.useEnergy();
+        assertEquals("Cannot use any more energy", daisy.useEnergy());
+    }
 }

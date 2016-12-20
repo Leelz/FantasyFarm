@@ -11,55 +11,47 @@ import static org.junit.Assert.*;
  */
 public class FieldTest {
 
-    private Enclosure enclosure;
-    private Animal dairyCow1;
-    private Animal dairyCow2;
+    private Field field;
+    private Cow dairyCow1;
+    private Cow dairyCow2;
 
     @Before
     public void Before()    {
-        enclosure = new Field(EnclosureType.FIELD);
+        field = new Field(EnclosureType.FIELD, 1);
         dairyCow1 = new Cow("Daisy", "Cow", 3);
         dairyCow2 = new Cow("Jane", "Cow", 5);
     }
 
     @Test
     public void testGetEnclosureType(){
-        assertEquals(EnclosureType.FIELD, enclosure.getEnclosureType());
+        assertEquals(EnclosureType.FIELD, field.getEnclosureType());
     }
 
     @Test
     public void testEnclosureStartsEmpty(){
-        assertEquals(0, enclosure.numberOfAnimalsInEnclosure());
+        assertEquals(0, field.getSize());
     }
 
     @Test
     public void testCanAddAnimalToEnclosure(){
-        enclosure.addAnimalToEnclosure(dairyCow1);
-        enclosure.addAnimalToEnclosure(dairyCow2);
-        assertEquals(2, enclosure.numberOfAnimalsInEnclosure());
+        field.addAnimalToEnclosure(dairyCow1);
+        field.addAnimalToEnclosure(dairyCow2);
+        assertEquals(2, field.getSize());
     }
 
     @Test
     public void canFindAnimalByName(){
-        enclosure.addAnimalToEnclosure(dairyCow1);
-        enclosure.addAnimalToEnclosure(dairyCow2);
-        assertEquals(dairyCow2, enclosure.findAnimalByName("Jane"));
+        field.addAnimalToEnclosure(dairyCow1);
+        field.addAnimalToEnclosure(dairyCow2);
+        assertEquals(dairyCow2, field.findAnimalByName("Jane"));
     }
 
     @Test
     public void testRemoveAnimalFromEnclosure(){
-        enclosure.addAnimalToEnclosure(dairyCow1);
-        enclosure.addAnimalToEnclosure(dairyCow2);
-        enclosure.removeAnimalByName("Jane");
-        assertEquals(1, enclosure.numberOfAnimalsInEnclosure());
-    }
-
-    @Test
-    public void testRemoveAnimalByIndex()   {
-        enclosure.addAnimalToEnclosure(dairyCow1);
-        enclosure.addAnimalToEnclosure(dairyCow2);
-        enclosure.removeAnimalByIndex(1);
-        assertEquals(1, enclosure.numberOfAnimalsInEnclosure());
+        field.addAnimalToEnclosure(dairyCow1);
+        field.addAnimalToEnclosure(dairyCow2);
+        field.removeAnimalByName("Jane");
+        assertEquals(1, field.getSize());
     }
 
 

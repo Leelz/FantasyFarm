@@ -12,56 +12,49 @@ import static org.junit.Assert.assertEquals;
  */
 public class CoopTest {
 
-    private Enclosure enclosure;
-    private Animal chicken1;
-    private Animal chicken2;
+    private Coop coop;
+    private Chicken chicken1;
+    private Chicken chicken2;
 
     @Before
     public void Before()    {
-        enclosure = new Coop(EnclosureType.COOP);
+        coop = new Coop(EnclosureType.COOP, 1);
         chicken1 = new Chicken("Daisy", "Chicken", 2);
         chicken2 = new Chicken("Jane", "Chicken", 2);
     }
 
     @Test
     public void testGetEnclosureType(){
-        assertEquals(EnclosureType.COOP, enclosure.getEnclosureType());
+        assertEquals(EnclosureType.COOP, coop.getEnclosureType());
     }
 
     @Test
     public void testEnclosureStartsEmpty(){
-        assertEquals(0, enclosure.numberOfAnimalsInEnclosure());
+        assertEquals(0, coop.getSize());
     }
 
     @Test
     public void testCanAddAnimalToEnclosure(){
-        enclosure.addAnimalToEnclosure(chicken1);
-        enclosure.addAnimalToEnclosure(chicken2);
-        assertEquals(2, enclosure.numberOfAnimalsInEnclosure());
+        coop.addAnimalToEnclosure(chicken1);
+        coop.addAnimalToEnclosure(chicken2);
+        assertEquals(2, coop.getSize());
     }
 
     @Test
     public void canFindAnimalByName(){
-        enclosure.addAnimalToEnclosure(chicken1);
-        enclosure.addAnimalToEnclosure(chicken2);
-        assertEquals(chicken2, enclosure.findAnimalByName("Jane"));
+        coop.addAnimalToEnclosure(chicken1);
+        coop.addAnimalToEnclosure(chicken2);
+        assertEquals(chicken2, coop.findAnimalByName("Jane"));
     }
 
     @Test
     public void testRemoveAnimalFromEnclosure(){
-        enclosure.addAnimalToEnclosure(chicken1);
-        enclosure.addAnimalToEnclosure(chicken2);
-        enclosure.removeAnimalByName("Jane");
-        assertEquals(1, enclosure.numberOfAnimalsInEnclosure());
+        coop.addAnimalToEnclosure(chicken1);
+        coop.addAnimalToEnclosure(chicken2);
+        coop.removeAnimalByName("Jane");
+        assertEquals(1, coop.getSize());
     }
 
-    @Test
-    public void testRemoveAnimalByIndex()   {
-        enclosure.addAnimalToEnclosure(chicken1);
-        enclosure.addAnimalToEnclosure(chicken2);
-        enclosure.removeAnimalByIndex(1);
-        assertEquals(1, enclosure.numberOfAnimalsInEnclosure());
-    }
 
 
 }

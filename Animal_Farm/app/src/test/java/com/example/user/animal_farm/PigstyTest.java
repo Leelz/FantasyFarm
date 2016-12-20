@@ -12,55 +12,47 @@ import static org.junit.Assert.assertEquals;
  */
 public class PigstyTest {
 
-    private Enclosure enclosure;
-    private Animal pig1;
-    private Animal pig2;
+    private Pigsty pigsty;
+    private Pig pig1;
+    private Pig pig2;
 
     @Before
     public void Before()    {
-        enclosure = new Pigsty(EnclosureType.PIGSTY);
+        pigsty = new Pigsty(EnclosureType.PIGSTY, 1);
         pig1 = new Pig("Daisy", "Pig", 5);
         pig2 = new Pig("Jane", "Pig", 4);
     }
 
     @Test
     public void testGetEnclosureType(){
-        assertEquals(EnclosureType.PIGSTY, enclosure.getEnclosureType());
+        assertEquals(EnclosureType.PIGSTY, pigsty.getEnclosureType());
     }
 
     @Test
     public void testEnclosureStartsEmpty(){
-        assertEquals(0, enclosure.numberOfAnimalsInEnclosure());
+        assertEquals(0, pigsty.getSize());
     }
 
     @Test
     public void testCanAddAnimalToEnclosure(){
-        enclosure.addAnimalToEnclosure(pig1);
-        enclosure.addAnimalToEnclosure(pig2);
-        assertEquals(2, enclosure.numberOfAnimalsInEnclosure());
+        pigsty.addAnimalToEnclosure(pig1);
+        pigsty.addAnimalToEnclosure(pig2);
+        assertEquals(2, pigsty.getSize());
     }
 
     @Test
     public void canFindAnimalByName(){
-        enclosure.addAnimalToEnclosure(pig1);
-        enclosure.addAnimalToEnclosure(pig2);
-        assertEquals(pig2, enclosure.findAnimalByName("Jane"));
+        pigsty.addAnimalToEnclosure(pig1);
+        pigsty.addAnimalToEnclosure(pig2);
+        assertEquals(pig2, pigsty.findAnimalByName("Jane"));
     }
 
     @Test
     public void testRemoveAnimalFromEnclosure(){
-        enclosure.addAnimalToEnclosure(pig1);
-        enclosure.addAnimalToEnclosure(pig2);
-        enclosure.removeAnimalByName("Jane");
-        assertEquals(1, enclosure.numberOfAnimalsInEnclosure());
-    }
-
-    @Test
-    public void testRemoveAnimalByIndex()   {
-        enclosure.addAnimalToEnclosure(pig1);
-        enclosure.addAnimalToEnclosure(pig2);
-        enclosure.removeAnimalByIndex(1);
-        assertEquals(1, enclosure.numberOfAnimalsInEnclosure());
+        pigsty.addAnimalToEnclosure(pig1);
+        pigsty.addAnimalToEnclosure(pig2);
+        pigsty.removeAnimalByName("Jane");
+        assertEquals(1, pigsty.getSize());
     }
 
 

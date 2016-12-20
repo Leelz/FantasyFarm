@@ -11,13 +11,11 @@ public class Pig extends Animal implements Trampleable {
         super(name, animalType, age);
     }
 
-    public String getAnimalType()   {
-        return animalType;
-    }
-
     public String Oink() {
         useEnergy();
         return "Oiiiiink";
     }
+
+
 
 }

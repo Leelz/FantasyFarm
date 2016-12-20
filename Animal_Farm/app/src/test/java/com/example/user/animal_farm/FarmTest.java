@@ -14,28 +14,43 @@ import static org.junit.Assert.*;
  */
 public class FarmTest {
     private Farm farm;
+    private Farm farm2;
     private Field field;
+    private Field field2;
+    private Cow daisy;
+
 
     @Before
     public void Before()    {
         farm = new Farm("Adam's Farm");
-        field = new Field(EnclosureType.FIELD);
+        field = new Field(EnclosureType.FIELD, 1);
+        farm2 = new Farm("Gino's Farm");
+        field2 = new Field(EnclosureType.FIELD, 2);
+        daisy = new Cow("Daisy", "Cow", 12);
     }
 
     @Test
-    public void testGetZooName() {
+    public void testGetFarmName() {
         assertEquals("Adam's Farm", farm.getName());
     }
 
     @Test
-    public void testZooStartsEmpty(){
+    public void testFarmStartsEmpty(){
         assertEquals(0, farm.numberOfEnclosuresInFarm());
     }
 
+    @Test
+    public void addEnclosuresToFarm() {
+        farm.addNewEnclosure(field);
+        assertEquals(1, farm.numberOfEnclosuresInFarm());
+    }
 
     @Test
-    public void addEnclosuresToZoo() {
+    public void sellCow() {
         farm.addNewEnclosure(field);
+        farm2.addNewEnclosure(field2);
+        farm.addCowToField(daisy, field);
+        farm.sellCow(farm2, daisy, field, field2);
         assertEquals(1, farm.numberOfEnclosuresInFarm());
     }
 

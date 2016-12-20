@@ -15,7 +15,6 @@ public abstract class Enclosure {
         this.enclosureID = enclosureID;
     }
 
-    //
     public EnclosureType getEnclosureType() {
         return this.type;
     }
@@ -23,6 +22,9 @@ public abstract class Enclosure {
     public int getEnclosureID() {
         return this.enclosureID;
     }
+
+
+
 
 }
 

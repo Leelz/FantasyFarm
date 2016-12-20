@@ -18,6 +18,7 @@ public class Farm {
         return name;
     }
 
+    //Enclosure Functions
     public void addNewEnclosure(Enclosure enclosure)   {
         allEnclosures.add(enclosure);
     }
@@ -26,12 +27,11 @@ public class Farm {
         return allEnclosures.get(index);
     }
 
-    public Enclosure getEnclosureName(String name){
+    public Enclosure getEnclosureByID(int id){
         for( Enclosure enclosure : allEnclosures){
-            if (enclosure.getEnclosureType() == type){
+            if (enclosure.getEnclosureID() == id){
                 return enclosure;
             }
-
         }
         return null;
     }
@@ -40,68 +40,28 @@ public class Farm {
         return allEnclosures.size();
     }
 
-    ////
-
-
-
-    public void addAnimaltoMysticalAnimals(MysticalAnimal animal){
-        mysticalAnimals.add(animal);
+    public int getEnclosureIndex(Enclosure enclosure) {
+        return allEnclosures.indexOf(enclosure);
     }
 
-    public void removeAnimalFromMysticalAnimals(MysticalAnimal animal){
-        mysticalAnimals.remove(animal);
-    }
+/// Adding Animals
 
-    public void addAnimalToEnclosures(String name, Mermeid mermeid){
-        PoolEnclosure enclosure = (PoolEnclosure)getEnclosureName(name);
-        enclosure.addAnimal(mermeid);
-    }
-
-    public void addAnimalToEnclosures(String name, Unicorn unicorn){
-        UnicornFenceEnclosure enclosure = (UnicornFenceEnclosure )getEnclosureName(name);
-        enclosure.addAnimal(unicorn);
-    }
-
-    public void addAnimalToEnclosures(String name, Dragon dragon){
-        DragonFenceEnclosure enclosure = (DragonFenceEnclosure)getEnclosureName(name);
-        enclosure.addAnimal(dragon);
-    }
-
-    public void removeAnimalsFromEnclosures(String name, Mermeid mermeid){
-        PoolEnclosure enclosure = (PoolEnclosure)getEnclosureName(name);
-        enclosure.removeAnimal(mermeid);
-    }
-
-    public void removeAnimalsFromEnclosures(String name, Unicorn unicorn){
-        UnicornFenceEnclosure enclosure = (UnicornFenceEnclosure )getEnclosureName(name);
-        enclosure.removeAnimal(unicorn);
-    }
-
-
-    public void removeAnimalsFromEnclosures(String name, Dragon dragon){
-        DragonFenceEnclosure enclosure = (DragonFenceEnclosure)getEnclosureName(name);
-        enclosure.removeAnimal(dragon);
+    public void addCowToField(Cow cow, Field field){
+        field.addAnimalToEnclosure(cow);
     }
 
     /////
 
-    public Animal canSellAnimal(Animal animal) {
-        if (animal.age <= 1) {
-            return animal;
+    public Boolean canSellAnimal(Animal animal) {
+        return animal.age <= 1;
+    }
+
+    public void sellCow(Farm farm2, Cow cow, Field field, Field field2)   {
+        if (canSellAnimal(cow)) {
+            Cow cowToSell = field.removeAnimal(cow);
+            farm2.addCowToField(cowToSell, field2);
         }
-        return null;
     }
-
-    public Animal removeAnimalFromEnclosure(Animal animal, Enclosure enclosure) {
-        return enclosure.removeAnimalByName(animal.getName());
-    }
-
-
-    public void sellCow(Farm farm1, Farm farm2, Animal animal, Enclosure enclosure)   {
-        Animal animalToSell = farm1.getAnimal(animal, enclosure);
-        farm2
-    }
-
 
 
 }

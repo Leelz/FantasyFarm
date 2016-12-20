@@ -9,10 +9,6 @@ public class Chicken extends Animal implements Trampleable, Edible {
         super(name, animalType, age);
     }
 
-    public String getAnimalType()   {
-        return animalType;
-    }
-
     public String Squawk() {
         useEnergy();
         return "Squawwwwk";

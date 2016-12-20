@@ -1,5 +1,7 @@
 package com.example.user.animal_farm;
 
+import java.util.ArrayList;
+
 /**
  * Created by user on 18/12/2016.
  */
@@ -18,6 +20,9 @@ public abstract class Animal {
     }
 
     //
+    public String getAnimalType()   {
+        return animalType;  }
+
     public int getEnergy() {
         return energy;
     }

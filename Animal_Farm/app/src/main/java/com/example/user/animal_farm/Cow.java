@@ -9,10 +9,6 @@ public class Cow extends Animal {
         super(name, animalType, age);
     }
 
-    public String getAnimalType()   {
-        return animalType;
-    }
-
     public String Moo() {
         useEnergy();
         return "Moooooo";

@@ -1,8 +1,10 @@
 import Farm.*;
-
-
-import org.junit.*;
 import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import java.util.ArrayList;
 
 /**
  * Created by user on 18/12/2016.

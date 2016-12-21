@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/user/Desktop/cx3_8/Fantasy Farm/Animal_Farm/app/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
+        "source": "/Users/user/Desktop/cx3_8/Fantasy Farm/Animal_Farm/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/color-v23/abc_color_highlight_material.xml"
+    },
+    {
+        "merged": "/Users/user/Desktop/cx3_8/week_7-AndroidStudio/Animal_Zoo/app/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
+        "source": "/Users/user/Desktop/cx3_8/week_7-AndroidStudio/Animal_Zoo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/color-v23/abc_color_highlight_material.xml"
+    },
+    {
+        "merged": "/Users/user/Desktop/cx3_8/Fantasy Zoo/Animal_Zoo/app/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
+        "source": "/Users/user/Desktop/cx3_8/Fantasy Zoo/Animal_Zoo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/color-v23/abc_color_highlight_material.xml"
+    }
+]

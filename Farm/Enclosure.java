@@ -20,10 +20,8 @@ public abstract class Enclosure {
     }
 
     public int getEnclosureID() {
-        return this.enclosureID;
+        return enclosureID;
     }
-
-
 
 
 }

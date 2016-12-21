@@ -18,8 +18,12 @@ public class Farm {
         return name;
     }
 
-    //Information about the Zoo
-    public void allAnimalsInZoo
+   //Functions to output messages
+    public void getEnclosureDetails() {
+        for (Enclosure enclosure : allEnclosures) {
+            System.out.println("\n This " + enclosure.getEnclosureType());
+              }
+        }
 
     //Enclosure Functions
     public void addNewEnclosure(Enclosure enclosure)   {
@@ -73,6 +77,10 @@ public class Farm {
             farm2.addCowToField(cowToSell, field2);
         }
     }
+
+    // Selling Tickets
+    // public void sellTicket()
+
 
 
 }

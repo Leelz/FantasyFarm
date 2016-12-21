@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/user/Desktop/cx3_8/week_7-AndroidStudio/Animal_Zoo/app/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4/ic_launcher.png",
+        "source": "/Users/user/Desktop/cx3_8/week_7-AndroidStudio/Animal_Zoo/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/user/Desktop/cx3_8/Fantasy Zoo/Animal_Zoo/app/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4/ic_launcher.png",
+        "source": "/Users/user/Desktop/cx3_8/Fantasy Zoo/Animal_Zoo/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/user/Desktop/cx3_8/Fantasy Farm/Animal_Farm/app/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4/ic_launcher.png",
+        "source": "/Users/user/Desktop/cx3_8/Fantasy Farm/Animal_Farm/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    }
+]

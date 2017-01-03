@@ -6,18 +6,11 @@ import java.util.ArrayList;
  * Created by user on 19/12/2016.
  */
 public class Field extends Enclosure  {
-
     public ArrayList<Cow> cattleList;
 
     public Field(EnclosureType type, int enclosureID){
         super(type, enclosureID);
         cattleList = new ArrayList<>();
-    }
-
-    public void getCowDetails() {
-        for (Cow cow : cattleList)   {
-            System.out.println(cow.getName());
-        }
     }
 
     public void addAnimalToEnclosure(Cow cow) {
@@ -33,26 +26,19 @@ public class Field extends Enclosure  {
         return cow;
     }
 
-    public Animal findAnimalByName(String searchName)   {
-        String searchLower = searchName.toLowerCase();
-        for (Animal animal : cattleList){
-            String animalName = animal.getName().toLowerCase();
-            if (animalName.equals(searchLower)){
-                return animal;
-            }
+    public void getCowDetails() {
+        for (Cow cow : cattleList)   {
+            System.out.println(cow.getName());
         }
-        return null;
     }
 
-    public int getAnimalIndex(Animal animal) {
-        return cattleList.indexOf(animal);
-    }
-
-    public Animal removeAnimalByName(String searchName)    {
-        Animal animal = findAnimalByName(searchName);
-        int index = getAnimalIndex(animal);
-        Animal removedAnimal = cattleList.remove(index);
-        return removedAnimal;
-    }
+    public ArrayList<Animal> returnAnimals() {
+        ArrayList<Animal> animals = new ArrayList<Animal>();
+        for (Cow cow : cattleList) {
+          Animal animal = (Animal)cow;
+          animals.add(animal);
+        }
+        return animals;
+      }
 
 }

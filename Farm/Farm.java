@@ -6,8 +6,8 @@ import java.util.ArrayList;
  */
 
 public class Farm {
-    private ArrayList<Enclosure> allEnclosures;
-    private String name;
+    ArrayList<Enclosure> allEnclosures;
+    String name;
 
     public Farm(String name) {
         allEnclosures = new ArrayList<>();

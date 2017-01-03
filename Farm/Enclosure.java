@@ -23,6 +23,9 @@ public abstract class Enclosure {
         return enclosureID;
     }
 
+    public abstract ArrayList<Animal> returnAnimals();
+    public abstract int getSize();
+
 }
 
 

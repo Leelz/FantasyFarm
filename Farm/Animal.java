@@ -54,5 +54,9 @@ public abstract class Animal {
         }
     }
 
+    public String getInfo() {
+       return "Name: " + getName() + " - Current Energy Level: " + getEnergy() + " - Animal: " + getAnimalType() + "\n";
+     }
+
 
 }

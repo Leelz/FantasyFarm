@@ -18,7 +18,7 @@ public class Game {
   public String index(){
     System.out.println("Hello there, so you're interested in managing your own farm! Check out the commands below");
 
-    System.out.println("What would you like to do? Write: \n'A' to see all the Zoo's Enclosures \n'B' to see all the Zoo's Animals, ");
+    System.out.println("What would you like to do? Write: \n'A' to see all the Zoo's Enclosures");
 
     String nav = System.console().readLine();
 
@@ -33,12 +33,12 @@ public class Game {
   }
 
     public void showFarmDetails(){
-      for (Enclosure enclosure : park.enclosures) {
+      for (Enclosure enclosure : farm.allEnclosures) {
             System.out.println("\n---------------------");
-              System.out.println("Enclosure Name: " + enclosure.getName() + "\nNumber of Dinosaurs: " + enclosure.getSize() + "\n");
-              ArrayList<Dinosaur> dinosaurs = enclosure.returnDinosaurs();
-              for (Dinosaur dinosaur : dinosaurs) {
-                System.out.println(dinosaur.getInfo());
+              System.out.println("Enclosure Name: " + enclosure.getEnclosureType() + "\nNumber of animals: " + enclosure.getSize() + "\n");
+              ArrayList<Animal> animals = enclosure.returnAnimals();
+              for (Animal animal : animals) {
+                System.out.println(animal.getInfo());
               }
             }
           }

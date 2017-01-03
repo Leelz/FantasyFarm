@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * Created by user on 19/12/2016.
  */
 public class Pigsty extends Enclosure {
-    private ArrayList<Pig> pigList;
+    public ArrayList<Pig> pigList;
 
     public Pigsty(EnclosureType type, int enclosureID){
         super(type, enclosureID);
@@ -31,26 +31,13 @@ public class Pigsty extends Enclosure {
         pigList.remove(pig);
     }
 
-    public Animal findAnimalByName(String searchName)   {
-        String searchLower = searchName.toLowerCase();
-        for (Animal animal : pigList){
-            String animalName = animal.getName().toLowerCase();
-            if (animalName.equals(searchLower)){
-                return animal;
-            }
+    public ArrayList<Animal> returnAnimals() {
+        ArrayList<Animal> animals = new ArrayList<Animal>();
+        for (Pig pig : pigList) {
+          Animal animal = (Animal)pig;
+          animals.add(animal);
         }
-        return null;
-    }
-
-    public int getAnimalIndex(Animal animal) {
-        return pigList.indexOf(animal);
-    }
-
-    public Animal removeAnimalByName(String searchName)    {
-        Animal animal = findAnimalByName(searchName);
-        int index = getAnimalIndex(animal);
-        Animal removedAnimal = pigList.remove(index);
-        return removedAnimal;
-    }
+        return animals;
+      }
 
 }

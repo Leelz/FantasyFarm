@@ -7,7 +7,7 @@ import java.util.ArrayList;
  */
 public class Coop extends Enclosure {
     
-    private ArrayList<Chicken> chickenList;
+    public ArrayList<Chicken> chickenList;
 
     public Coop(EnclosureType type, int enclosureID){
         super(type, enclosureID);
@@ -32,28 +32,14 @@ public class Coop extends Enclosure {
         chickenList.remove(chicken);
     }
 
-    public Animal findAnimalByName(String searchName)   {
-        String searchLower = searchName.toLowerCase();
-        for (Animal animal : chickenList){
-            String animalName = animal.getName().toLowerCase();
-            if (animalName.equals(searchLower)){
-                return animal;
-            }
+    public ArrayList<Animal> returnAnimals() {
+        ArrayList<Animal> animals = new ArrayList<Animal>();
+        for (Chicken chicken : chickenList) {
+          Animal animal = (Animal)chicken;
+          animals.add(animal);
         }
-        return null;
-    }
-
-
-    public int getAnimalIndex(Animal animal) {
-        return chickenList.indexOf(animal);
-    }
-
-    public Animal removeAnimalByName(String searchName)    {
-        Animal animal = findAnimalByName(searchName);
-        int index = getAnimalIndex(animal);
-        Animal removedAnimal = chickenList.remove(index);
-        return removedAnimal;
-    }
+        return animals;
+      }
 
 }
 

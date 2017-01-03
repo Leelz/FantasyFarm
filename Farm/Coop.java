@@ -13,6 +13,12 @@ public class Coop extends Enclosure {
         super(type, enclosureID);
         chickenList = new ArrayList<>();
     }
+
+    public void getChickenDetails() {
+        for (Chicken chicken : chickenList)   {
+            System.out.println(chicken.getName());
+        }
+    }
     
     public void addAnimalToEnclosure(Chicken chicken) {
         chickenList.add(chicken);

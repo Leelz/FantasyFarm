@@ -9,27 +9,26 @@ public class Runner {
     System.out.println("Welcome to " + farm.getName());
     Game game = new Game(farm);
 
-    field = new Field(EnclosureType.FIELD, 1);
-    farm.add(field);
+    Field field = new Field(EnclosureType.FIELD, 1);
+    farm.addNewEnclosure(field);
 
-    Pigsty pigsy1 = new Pigsty(EnclosureType.PIGSTY, 1);
-    farm.add(pigsy);
+    Pigsty pigsty = new Pigsty(EnclosureType.PIGSTY, 1);
+    farm.addNewEnclosure(pigsty);
 
-    COOP coop = new COOP(EnclosureType.COOP, 1);
-    farm.add(coop);
+    Coop coop = new Coop(EnclosureType.COOP, 1);
+    farm.addNewEnclosure(coop);
 
 /////////
-    Pig pig1 = new Pig("Daisy", "Pig", 5);
-    farm.addPigToPigsty(pig1, pigsty)
+    Pig pig1 = new Pig("Porky", "Pig", 5);
+    farm.addPigToPigsty(pig1, pigsty);
 
     Cow cow1 = new Cow("Patty", "Cow", 1);
     farm.addCowToField(cow1, field);
 
-    Chicken chicken1 = new Chicken("Ralph", 10);
-    farm.addChickenToCoop(chicken1, coop)
+    Chicken chicken1 = new Chicken("Ralph", "Chicken", 10);
+    farm.addChickenToCoop(chicken1, coop);
 
-
-    Game.run();
+    game.run();
 
   }
 }

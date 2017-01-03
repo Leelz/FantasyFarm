@@ -14,6 +14,12 @@ public class Field extends Enclosure  {
         cattleList = new ArrayList<>();
     }
 
+    public void getCowDetails() {
+        for (Cow cow : cattleList)   {
+            System.out.println(cow.getName());
+        }
+    }
+
     public void addAnimalToEnclosure(Cow cow) {
         cattleList.add(cow);
     }

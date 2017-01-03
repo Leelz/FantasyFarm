@@ -18,7 +18,7 @@ public class Farm {
         return name;
     }
 
-   //Functions to output messages
+   //Functions to output info
     public void getEnclosureDetails() {
         for (Enclosure enclosure : allEnclosures) {
             System.out.println("\n This " + enclosure.getEnclosureType());
@@ -51,7 +51,7 @@ public class Farm {
         return allEnclosures.indexOf(enclosure);
     }
 
-/// Adding Animals
+/// Animal Functions
 
     public void addCowToField(Cow cow, Field field){
         field.addAnimalToEnclosure(cow);
@@ -61,7 +61,7 @@ public class Farm {
         coop.addAnimalToEnclosure(chicken);
     }
 
-    public void addPigToField(Pig pig, Pigsty pigsty){
+    public void addPigToPigsty(Pig pig, Pigsty pigsty){
         pigsty.addAnimalToEnclosure(pig);
     }
 

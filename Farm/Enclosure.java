@@ -23,7 +23,6 @@ public abstract class Enclosure {
         return enclosureID;
     }
 
-
 }
 
 

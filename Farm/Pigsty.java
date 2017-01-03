@@ -21,6 +21,12 @@ public class Pigsty extends Enclosure {
         return pigList.size();
     }
 
+    public void getPigDetails() {
+        for (Pig pig : pigList)   {
+            System.out.println(pig.getName());
+        }
+    }
+
     public void removeAnimal(Pig pig){
         pigList.remove(pig);
     }
@@ -36,7 +42,6 @@ public class Pigsty extends Enclosure {
         return null;
     }
 
-
     public int getAnimalIndex(Animal animal) {
         return pigList.indexOf(animal);
     }
@@ -47,4 +52,5 @@ public class Pigsty extends Enclosure {
         Animal removedAnimal = pigList.remove(index);
         return removedAnimal;
     }
+
 }

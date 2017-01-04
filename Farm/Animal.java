@@ -14,7 +14,7 @@ public abstract class Animal {
 
     public Animal(String name, String animalType, int age){
         this.name = name;
-        this.energy = 100;
+        this.energy = 60;
         this.animalType = animalType;
         this.age = age;
     }

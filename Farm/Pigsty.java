@@ -40,4 +40,15 @@ public class Pigsty extends Enclosure {
         return animals;
       }
 
+    public Animal findAnimalByName(String searchName)   {
+            String searchLower = searchName.toLowerCase();
+            for (Animal animal : pigList){
+                String animalName = animal.getName().toLowerCase();
+                if (animalName.equals(searchLower)){
+                    return animal;
+                }
+            }
+            return null;
+        }
+
 }

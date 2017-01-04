@@ -29,7 +29,7 @@ public class CowTest {
 
     @Test
     public void testGetCowEnergy()   {
-        assertEquals(100, daisy.getEnergy());
+        assertEquals(60, daisy.getEnergy());
     }
 
     @Test
@@ -39,9 +39,8 @@ public class CowTest {
 
     @Test
     public void testAnimalCanEat() {
-        patty.useEnergy();
         patty.eat();
-        assertEquals(100, patty.getEnergy());
+        assertEquals(70, patty.getEnergy());
     }
 
     @Test
